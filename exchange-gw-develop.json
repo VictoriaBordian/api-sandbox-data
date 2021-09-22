@@ -1,6 +1,6 @@
 {
-   "exchange/develop":{
-      "url":"wss://exchange-gateway-develop.exchange.rnd.exberry.io",
+   "exchange/master":{
+      "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
       "provider":"websocket",
       "methods":[
          {
