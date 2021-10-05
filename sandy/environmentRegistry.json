@@ -1,7 +1,7 @@
 {
 	"echoWebSocket": {
 		"provider": "websocket",
-		"url": "wss://echo.websocket.org/",
+		"url": "wss://websocket-echo.glitch.me",
 		"order": 1,
 		"methods": [
 			{
