@@ -345,7 +345,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":379,
+      "order":392,
       "methods":[
          {
             "group":"Authentication Service",
@@ -646,12 +646,12 @@
             }
          }
       ],
-      "order":343
+      "order":356
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.ops.rnd.exberry.io/api",
       "provider":"rsocket",
-      "order":360,
+      "order":373,
       "methods":[
          {
             "group":"Lists",
@@ -1089,7 +1089,7 @@
             }
          }
       ],
-      "order":266
+      "order":279
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1432,7 +1432,7 @@
             }
          }
       ],
-      "order":129
+      "order":142
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
@@ -2118,7 +2118,7 @@
             }
          }
       ],
-      "order":181
+      "order":194
    },
    "[custom]-new-env-12":{
       "url":"wss://sandbox-shared.staging.exberry-uat.io",
@@ -2461,6 +2461,117 @@
             }
          }
       ],
-      "order":270
+      "order":283
+   },
+   "[custom]-new-env-13":{
+      "url":"wss://api-gateway-master.site.rnd.exberry.io",
+      "provider":"websocket",
+      "methods":[
+         {
+            "group":"Authentication API",
+            "methodName":"createSession - Broker",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.mps/createSession",
+                  "sid":1,
+                  "d":{
+                     "apiKey":"",
+                     "timestamp":"",
+                     "signature":""
+                  }
+               },
+               "metadata":{
+                  "q":{
+                     "type":"input",
+                     "id":"q",
+                     "label":"q",
+                     "valueType":"text",
+                     "initialValue":"v1/exchange.mps/createSession",
+                     "hidden":true,
+                     "required":true
+                  },
+                  "sid":{
+                     "type":"input",
+                     "id":"sid",
+                     "label":"sid",
+                     "valueType":"number",
+                     "initialValue":1,
+                     "required":true
+                  },
+                  "apiKey":{
+                     "type":"input",
+                     "id":"apiKey",
+                     "label":"apiKey",
+                     "valueType":"text",
+                     "initialValue":"79098597-0196-445e-ae34-5553d92f15fb",
+                     "required":true
+                  },
+                  "secret":{
+                     "type":"input",
+                     "id":"secret",
+                     "label":"secret",
+                     "valueType":"text",
+                     "initialValue":"522c75a4433941f7afa4f2331fac390d8004ec53b399f485c65ad306deb56fb7",
+                     "required":true
+                  },
+                  "timestamp":{
+                     "type":"input",
+                     "id":"timestamp",
+                     "label":"timestamp",
+                     "valueType":"number",
+                     "initialValue":"__TIMESTAMP__",
+                     "required":true
+                  },
+                  "signature":{
+                     "type":"input",
+                     "id":"signature",
+                     "label":"signature",
+                     "valueType":"text",
+                     "hidden":true,
+                     "initialValue":"__SIGNATURE__"
+                  }
+               },
+               "structure":{
+                  "q":"q",
+                  "sid":"sid",
+                  "d":[
+                     "apiKey",
+                     "timestamp",
+                     "signature"
+                  ]
+               }
+            }
+         },
+         {
+            "group":"Reporting API",
+            "methodName":"trades",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.reporting/mp/trades",
+                  "sid":10,
+                  "d":{
+                     "dateFrom":"2020-10-01 00:00:01",
+                     "dateTo":"2020-11-01 00:00:01"
+                  }
+               }
+            }
+         },
+         {
+            "group":"Reporting API",
+            "methodName":"orders",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.reporting/mp/orders",
+                  "sid":10,
+                  "d":{
+                     "dateFrom":"2020-10-01 00:00:01",
+                     "dateTo":"2020-11-01 00:00:01",
+                     "status":"Active"
+                  }
+               }
+            }
+         }
+      ],
+      "order":66
    }
 }
