@@ -345,7 +345,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":392,
+      "order":394,
       "methods":[
          {
             "group":"Authentication Service",
@@ -646,12 +646,12 @@
             }
          }
       ],
-      "order":356
+      "order":358
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.ops.rnd.exberry.io/api",
       "provider":"rsocket",
-      "order":373,
+      "order":375,
       "methods":[
          {
             "group":"Lists",
@@ -1089,7 +1089,7 @@
             }
          }
       ],
-      "order":279
+      "order":281
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1432,7 +1432,7 @@
             }
          }
       ],
-      "order":142
+      "order":144
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
@@ -2118,7 +2118,7 @@
             }
          }
       ],
-      "order":194
+      "order":196
    },
    "[custom]-new-env-12":{
       "url":"wss://sandbox-shared.staging.exberry-uat.io",
@@ -2461,7 +2461,7 @@
             }
          }
       ],
-      "order":283
+      "order":285
    },
    "[custom]-new-env-13":{
       "url":"wss://api-gateway-master.site.rnd.exberry.io",
@@ -2472,7 +2472,7 @@
             "methodName":"createSession - Broker",
             "payload":{
                "sample":{
-                  "q":"v1/exchange.mps/createSession",
+                  "q":"exchange.market/createSession",
                   "sid":1,
                   "d":{
                      "apiKey":"",
@@ -2486,7 +2486,7 @@
                      "id":"q",
                      "label":"q",
                      "valueType":"text",
-                     "initialValue":"v1/exchange.mps/createSession",
+                     "initialValue":"exchange.market/createSession",
                      "hidden":true,
                      "required":true
                   },
@@ -2572,6 +2572,6 @@
             }
          }
       ],
-      "order":66
+      "order":67
    }
 }
