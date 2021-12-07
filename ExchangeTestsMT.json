@@ -338,6 +338,23 @@
                   }
                }
             }
+         },
+         {
+            "group":"Trading API",
+            "methodName":"replaceOrder",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.market/replaceOrder",
+                  "sid":1,
+                  "d":{
+                     "orderId":"81",
+                     "instrument":"AMZ",
+                     "quantity":10,
+                     "price":1,
+                     "timeInForce":"GTC"
+                  }
+               }
+            }
          }
       ],
       "order":2
@@ -345,7 +362,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":409,
+      "order":410,
       "methods":[
          {
             "group":"Authentication Service",
@@ -646,12 +663,12 @@
             }
          }
       ],
-      "order":373
+      "order":374
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.ops.rnd.exberry.io/api",
       "provider":"rsocket",
-      "order":390,
+      "order":391,
       "methods":[
          {
             "group":"Lists",
@@ -1089,7 +1106,7 @@
             }
          }
       ],
-      "order":296
+      "order":297
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1432,7 +1449,7 @@
             }
          }
       ],
-      "order":147
+      "order":148
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
@@ -1775,7 +1792,7 @@
             }
          }
       ],
-      "order":65
+      "order":66
    },
    "[custom]-new-env-11":{
       "url":"wss://exchange-gateway-release.exchange.rnd.exberry.io",
@@ -2118,7 +2135,7 @@
             }
          }
       ],
-      "order":211
+      "order":212
    },
    "[custom]-new-env-12":{
       "url":"wss://sandbox-shared.staging.exberry-uat.io",
@@ -2461,7 +2478,7 @@
             }
          }
       ],
-      "order":300
+      "order":301
    },
    "[custom]-new-env-13":{
       "url":"wss://api-gateway-master.site.rnd.exberry.io",
@@ -2572,7 +2589,7 @@
             }
          }
       ],
-      "order":67
+      "order":68
    },
    "[custom]-new-env-14":{
       "url":"wss://api-gateway-rc.site.rnd.exberry.io",
@@ -2683,6 +2700,6 @@
             }
          }
       ],
-      "order":148
+      "order":149
    }
 }
