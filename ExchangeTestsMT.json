@@ -362,7 +362,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":411,
+      "order":425,
       "methods":[
          {
             "group":"Authentication Service",
@@ -663,12 +663,12 @@
             }
          }
       ],
-      "order":375
+      "order":389
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.ops.rnd.exberry.io/api",
       "provider":"rsocket",
-      "order":392,
+      "order":406,
       "methods":[
          {
             "group":"Lists",
@@ -1106,7 +1106,7 @@
             }
          }
       ],
-      "order":298
+      "order":312
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1449,7 +1449,7 @@
             }
          }
       ],
-      "order":149
+      "order":163
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
@@ -1809,7 +1809,7 @@
             }
          }
       ],
-      "order":66
+      "order":80
    },
    "[custom]-new-env-11":{
       "url":"wss://exchange-gateway-release.exchange.rnd.exberry.io",
@@ -2152,7 +2152,7 @@
             }
          }
       ],
-      "order":213
+      "order":227
    },
    "[custom]-new-env-12":{
       "url":"wss://sandbox-shared.staging.exberry-uat.io",
@@ -2495,7 +2495,7 @@
             }
          }
       ],
-      "order":302
+      "order":316
    },
    "[custom]-new-env-13":{
       "url":"wss://api-gateway-master.site.rnd.exberry.io",
@@ -2606,7 +2606,7 @@
             }
          }
       ],
-      "order":69
+      "order":83
    },
    "[custom]-new-env-14":{
       "url":"wss://api-gateway-rc.site.rnd.exberry.io",
@@ -2717,6 +2717,117 @@
             }
          }
       ],
-      "order":150
+      "order":164
+   },
+   "[custom]-new-env-15":{
+      "url":"wss://api-gateway-develop.site.rnd.exberry.io",
+      "provider":"websocket",
+      "methods":[
+         {
+            "group":"Authentication API",
+            "methodName":"createSession - Broker",
+            "payload":{
+               "sample":{
+                  "q":"exchange.market/createSession",
+                  "sid":1,
+                  "d":{
+                     "apiKey":"",
+                     "timestamp":"",
+                     "signature":""
+                  }
+               },
+               "metadata":{
+                  "q":{
+                     "type":"input",
+                     "id":"q",
+                     "label":"q",
+                     "valueType":"text",
+                     "initialValue":"exchange.market/createSession",
+                     "hidden":true,
+                     "required":true
+                  },
+                  "sid":{
+                     "type":"input",
+                     "id":"sid",
+                     "label":"sid",
+                     "valueType":"number",
+                     "initialValue":1,
+                     "required":true
+                  },
+                  "apiKey":{
+                     "type":"input",
+                     "id":"apiKey",
+                     "label":"apiKey",
+                     "valueType":"text",
+                     "initialValue":"6c6e5c3a-8924-496a-9d00-328c0a17df64",
+                     "required":true
+                  },
+                  "secret":{
+                     "type":"input",
+                     "id":"secret",
+                     "label":"secret",
+                     "valueType":"text",
+                     "initialValue":"224b3f1fa10eb951184d4ffa16b638012e0015440812396b53bcadc14f335279",
+                     "required":true
+                  },
+                  "timestamp":{
+                     "type":"input",
+                     "id":"timestamp",
+                     "label":"timestamp",
+                     "valueType":"number",
+                     "initialValue":"__TIMESTAMP__",
+                     "required":true
+                  },
+                  "signature":{
+                     "type":"input",
+                     "id":"signature",
+                     "label":"signature",
+                     "valueType":"text",
+                     "hidden":true,
+                     "initialValue":"__SIGNATURE__"
+                  }
+               },
+               "structure":{
+                  "q":"q",
+                  "sid":"sid",
+                  "d":[
+                     "apiKey",
+                     "timestamp",
+                     "signature"
+                  ]
+               }
+            }
+         },
+         {
+            "group":"Reporting API",
+            "methodName":"trades",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.reporting/mp/trades",
+                  "sid":10,
+                  "d":{
+                     "dateFrom":"2020-10-01T00:00:01",
+                     "dateTo":"2020-11-01T00:00:01"
+                  }
+               }
+            }
+         },
+         {
+            "group":"Reporting API",
+            "methodName":"orders",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.reporting/mp/orders",
+                  "sid":10,
+                  "d":{
+                     "dateFrom":"2020-10-01T00:00:01",
+                     "dateTo":"2020-11-01T00:00:01",
+                     "status":"Active"
+                  }
+               }
+            }
+         }
+      ],
+      "order":3
    }
 }
