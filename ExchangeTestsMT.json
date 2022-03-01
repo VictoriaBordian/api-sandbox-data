@@ -362,7 +362,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":425,
+      "order":428,
       "methods":[
          {
             "group":"Authentication Service",
@@ -663,12 +663,12 @@
             }
          }
       ],
-      "order":389
+      "order":392
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.ops.rnd.exberry.io/api",
       "provider":"rsocket",
-      "order":406,
+      "order":409,
       "methods":[
          {
             "group":"Lists",
@@ -1106,7 +1106,7 @@
             }
          }
       ],
-      "order":312
+      "order":315
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1449,7 +1449,7 @@
             }
          }
       ],
-      "order":163
+      "order":166
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
@@ -1809,7 +1809,7 @@
             }
          }
       ],
-      "order":80
+      "order":83
    },
    "[custom]-new-env-11":{
       "url":"wss://exchange-gateway-release.exchange.rnd.exberry.io",
@@ -2152,7 +2152,7 @@
             }
          }
       ],
-      "order":227
+      "order":230
    },
    "[custom]-new-env-12":{
       "url":"wss://sandbox-shared.staging.exberry-uat.io",
@@ -2495,7 +2495,7 @@
             }
          }
       ],
-      "order":316
+      "order":319
    },
    "[custom]-new-env-13":{
       "url":"wss://api-gateway-master.site.rnd.exberry.io",
@@ -2606,7 +2606,7 @@
             }
          }
       ],
-      "order":83
+      "order":86
    },
    "[custom]-new-env-14":{
       "url":"wss://api-gateway-rc.site.rnd.exberry.io",
@@ -2717,7 +2717,7 @@
             }
          }
       ],
-      "order":164
+      "order":167
    },
    "[custom]-new-env-15":{
       "url":"wss://api-gateway-develop.site.rnd.exberry.io",
@@ -2823,6 +2823,22 @@
                      "dateFrom":"2020-10-01T00:00:01",
                      "dateTo":"2020-11-01T00:00:01",
                      "status":"Active"
+                  }
+               }
+            }
+         },
+         {
+            "group":"Market Data API",
+            "methodName":"partialOrderBook",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.marketdata/partialOrderBook",
+                  "sid":10,
+                  "d":{
+                     "symbol":"0Test",
+                     "levels":5,
+                     "frequency":1000,
+                     "decimals":2
                   }
                }
             }
