@@ -362,7 +362,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":428,
+      "order":438,
       "methods":[
          {
             "group":"Authentication Service",
@@ -663,12 +663,12 @@
             }
          }
       ],
-      "order":392
+      "order":402
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.ops.rnd.exberry.io/api",
       "provider":"rsocket",
-      "order":409,
+      "order":419,
       "methods":[
          {
             "group":"Lists",
@@ -1106,7 +1106,7 @@
             }
          }
       ],
-      "order":315
+      "order":325
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1449,7 +1449,7 @@
             }
          }
       ],
-      "order":166
+      "order":176
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
@@ -1809,7 +1809,7 @@
             }
          }
       ],
-      "order":83
+      "order":93
    },
    "[custom]-new-env-11":{
       "url":"wss://exchange-gateway-release.exchange.rnd.exberry.io",
@@ -2152,7 +2152,7 @@
             }
          }
       ],
-      "order":230
+      "order":240
    },
    "[custom]-new-env-12":{
       "url":"wss://sandbox-shared.staging.exberry-uat.io",
@@ -2495,7 +2495,7 @@
             }
          }
       ],
-      "order":319
+      "order":329
    },
    "[custom]-new-env-13":{
       "url":"wss://api-gateway-master.site.rnd.exberry.io",
@@ -2606,7 +2606,7 @@
             }
          }
       ],
-      "order":86
+      "order":96
    },
    "[custom]-new-env-14":{
       "url":"wss://api-gateway-rc.site.rnd.exberry.io",
@@ -2717,7 +2717,7 @@
             }
          }
       ],
-      "order":167
+      "order":177
    },
    "[custom]-new-env-15":{
       "url":"wss://api-gateway-develop.site.rnd.exberry.io",
@@ -2842,8 +2842,89 @@
                   }
                }
             }
+         },
+         {
+            "group":"Market Data API",
+            "methodName":"lightTickers",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.marketdata/lightTickers",
+                  "sid":10,
+                  "d":{
+                     "symbols":[
+                        "0Test"
+                     ],
+                     "frequency":1000
+                  }
+               }
+            }
          }
       ],
       "order":3
+   },
+   "[custom]-new-env-16":{
+      "url":"wss://oms-trading-gateway-develop.exchange.rnd.exberry.io",
+      "provider":"websocket",
+      "methods":[
+         {
+            "group":"Authentication API",
+            "methodName":"createSession",
+            "payload":{
+               "sample":{
+                  "q":"v1/broker.oms/createSession",
+                  "sid":1,
+                  "d":{
+                     "token":"abc"
+                  }
+               }
+            }
+         },
+         {
+            "group":"Trading API",
+            "methodName":"placeOrder",
+            "payload":{
+               "sample":{
+                  "q":"v1/broker.oms/placeOrder",
+                  "sid":1,
+                  "d":{
+                     "orderType":"Limit",
+                     "side":"Buy",
+                     "instrument":"0Test",
+                     "quantity":2,
+                     "price":1200,
+                     "timeInForce":"GTC"
+                  }
+               }
+            }
+         },
+         {
+            "group":"Trading API",
+            "methodName":"orders",
+            "payload":{
+               "sample":{
+                  "q":"v1/broker.account/orders",
+                  "sid":1,
+                  "d":{
+                     "instrument":"INS1"
+                  }
+               }
+            }
+         },
+         {
+            "group":"Trading API",
+            "methodName":"cancel",
+            "payload":{
+               "sample":{
+                  "q":"v1/broker.oms/cancelOrder",
+                  "sid":1,
+                  "d":{
+                     "instrument":"INS1",
+                     "orderId":1
+                  }
+               }
+            }
+         }
+      ],
+      "order":5
    }
 }
